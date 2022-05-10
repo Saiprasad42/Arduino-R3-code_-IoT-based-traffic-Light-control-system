@@ -1,0 +1,273 @@
+#define red1 3
+
+#define green1 2
+
+#define red2 5
+
+#define green2 4
+
+#define red3 7
+
+#define green3 6
+
+#define red4 9
+
+#define green4 8
+
+#define buz A0
+
+char c;
+
+void setup() {
+
+  Serial.begin(9600);
+
+  pinMode(red1, OUTPUT);
+
+  pinMode(green1, OUTPUT);
+
+  pinMode(red2, OUTPUT);
+
+  pinMode(green2, OUTPUT);
+
+  pinMode(red3, OUTPUT);
+
+  pinMode(green3, OUTPUT);
+
+  pinMode(red4, OUTPUT);
+
+  pinMode(green4, OUTPUT);
+
+  pinMode(buz, OUTPUT);
+
+  digitalWrite(red1, LOW);
+
+  digitalWrite(red2, LOW);
+
+  digitalWrite(red3, LOW);
+
+  digitalWrite(red4, LOW);
+
+  digitalWrite(green1, HIGH);
+
+  digitalWrite(green2, HIGH);
+
+  digitalWrite(green3, HIGH);
+
+  digitalWrite(green4, HIGH);
+
+  digitalWrite(green4, HIGH);
+
+  delay(1000);
+
+  digitalWrite(buz, LOW);
+
+}
+
+void loop() {
+
+ while(Serial.available()>0)
+
+      c = Serial.read();
+
+      Serial.read();
+
+  if (c== 'S')
+
+  {
+
+    digitalWrite(red1, LOW);
+
+    digitalWrite(red2, HIGH);
+
+    digitalWrite(red3, HIGH);
+
+    digitalWrite(red4, HIGH);
+
+    digitalWrite(green1, HIGH);
+
+    digitalWrite(green2, LOW);
+
+    digitalWrite(green3, LOW);
+
+    digitalWrite(green4, LOW);
+
+    delay(1000);
+
+    digitalWrite(buz, HIGH);
+
+    delay(3000);
+
+    digitalWrite(buz, LOW);
+
+  }
+
+  else if (c == 'K')
+
+  {
+
+    digitalWrite(red1, HIGH);
+
+    digitalWrite(red2, LOW);
+
+    digitalWrite(red3, HIGH);
+
+    digitalWrite(red4, HIGH);
+
+    digitalWrite(green1, LOW);
+
+    digitalWrite(green2, HIGH);
+
+    digitalWrite(green3, LOW);
+
+    digitalWrite(green4, LOW);
+
+    delay(1000);
+
+    digitalWrite(buz, HIGH);
+
+    delay(3000);
+
+    digitalWrite(buz, LOW);
+
+  }
+
+  else if (c == 'M')
+
+  {
+
+    digitalWrite(red1, HIGH);
+
+    digitalWrite(red2, HIGH);
+
+    digitalWrite(red3, LOW);
+
+    digitalWrite(red4, HIGH);
+
+    digitalWrite(green1, LOW);
+
+    digitalWrite(green2, LOW);
+
+    digitalWrite(green3, HIGH);
+
+    digitalWrite(green4, LOW);
+
+    delay(1000);
+
+    digitalWrite(buz, HIGH);
+
+    delay(3000);
+
+    digitalWrite(buz, LOW);
+
+  }
+
+  else if (c=='O')
+
+  {
+
+    digitalWrite(red1, HIGH);
+
+    digitalWrite(red2, HIGH);
+
+    digitalWrite(red3, HIGH);
+
+    digitalWrite(red4, LOW);
+
+    digitalWrite(green1, LOW);
+
+    digitalWrite(green2, LOW);
+
+    digitalWrite(green3, LOW);
+
+    digitalWrite(green4, HIGH);
+
+    delay(1000);
+
+    digitalWrite(buz, HIGH);
+
+    delay(3000);
+
+    digitalWrite(buz, LOW);
+
+  }
+
+  else
+
+  {
+
+  digitalWrite(red1, LOW);
+
+  digitalWrite(red2, HIGH);
+
+  digitalWrite(red3, HIGH);
+
+  digitalWrite(red4, HIGH);
+
+  digitalWrite(green1, HIGH);
+
+  digitalWrite(green2, LOW);
+
+  digitalWrite(green3, LOW);
+
+  digitalWrite(green4, LOW);
+
+  delay(2000);
+
+  digitalWrite(red1, HIGH);
+
+  digitalWrite(red2, LOW);
+
+  digitalWrite(red3, HIGH);
+
+  digitalWrite(red4, HIGH);
+
+  digitalWrite(green1, LOW);
+
+  digitalWrite(green2, HIGH);
+
+  digitalWrite(green3, LOW);
+
+  digitalWrite(green4, LOW);
+
+  delay(2000);
+
+  digitalWrite(red1, HIGH);
+
+  digitalWrite(red2, HIGH);
+
+  digitalWrite(red3, LOW);
+
+  digitalWrite(red4, HIGH);
+
+  digitalWrite(green1, LOW);
+
+  digitalWrite(green2, LOW);
+
+  digitalWrite(green3, HIGH);
+
+  digitalWrite(green4, LOW);
+
+  delay(2000);
+
+  digitalWrite(red1, HIGH);
+
+  digitalWrite(red2, HIGH);
+
+  digitalWrite(red3, HIGH);
+
+  digitalWrite(red4, LOW);
+
+  digitalWrite(green1, LOW);
+
+  digitalWrite(green2, LOW);
+
+  digitalWrite(green3, LOW);
+
+  digitalWrite(green4, HIGH);
+
+  delay(2000);
+
+}
+
+}
